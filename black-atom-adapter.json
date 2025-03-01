@@ -1,0 +1,7 @@
+{
+  "$schema": "https://raw.githubusercontent.com/black-atom-industries/core/refs/heads/main/adapter.schema.json",
+  
+  "black-atom-stations-engineering": {
+    "templates": ["./themes/example.template.json"]
+  }
+}
