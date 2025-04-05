@@ -17,14 +17,21 @@ This repository provides a template for creating new Black Atom theme adapters. 
 ├── EXAMPLES.md               # Example templates in different formats
 ├── black-atom-adapter.json   # Adapter configuration file
 └── themes/                   # Template directory
-    └── example.template.json # Example template file
+    ├── stations/             # Stations collection templates
+    │   └── collection.template.json
+    ├── jpn/                  # JPN collection templates
+    │   └── collection.template.json
+    ├── crbn/                 # CRBN collection templates
+    │   └── collection.template.json
+    └── terra/                # Terra collection templates
+        └── collection.template.json
 ```
 
 ## Setup Steps
 
 1. **Update README.md** - Customize this file with platform-specific information
-2. **Edit black-atom-adapter.json** - Map themes to your template files
-3. **Create template files** - Add `.template.{ext}` files for each theme
+2. **Edit black-atom-adapter.json** - Configure collection-based templates
+3. **Create collection templates** - Create or modify `.template.{ext}` files for each collection
 4. **Test your adapter** - Run `black-atom-core adapt` to generate theme files
 
 ## Template Formats
@@ -62,20 +69,39 @@ Your templates can access the following theme properties:
 
 ## Adapter Configuration
 
-The `black-atom-adapter.json` file maps theme keys to template files:
+The `black-atom-adapter.json` file uses a collection-based approach to map templates to themes:
 
 ```json
 {
-  "black-atom-stations-engineering": {
-    "templates": ["./themes/example.template.json"]
-  },
-  "black-atom-jpn-koyo-yoru": {
-    "templates": ["./themes/jpn.template.css"]
+  "collections": {
+    "stations": {
+      "template": "./themes/stations/collection.template.json",
+      "themes": [
+        "black-atom-stations-engineering",
+        "black-atom-stations-operations",
+        "black-atom-stations-medical",
+        "black-atom-stations-research"
+      ]
+    },
+    "jpn": {
+      "template": "./themes/jpn/collection.template.json",
+      "themes": [
+        "black-atom-jpn-koyo-yoru",
+        "black-atom-jpn-koyo-hiru",
+        "black-atom-jpn-tsuki-yoru",
+        "black-atom-jpn-murasaki-yoru"
+      ]
+    }
   }
 }
 ```
 
-You can define multiple templates per theme if your platform requires multiple output files.
+This approach offers several advantages:
+- **Reduced duplication**: One template file per collection instead of per theme
+- **Better organization**: Themes are grouped by their collection
+- **Easier maintenance**: When you need to update a template, you only need to modify one file per collection
+
+If your platform requires multiple output files per theme, you can handle this in your build process.
 
 ## For More Information
 

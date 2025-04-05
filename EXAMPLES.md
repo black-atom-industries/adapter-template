@@ -156,7 +156,7 @@ function M.setup()
         Visual = { bg = M.ui.bg.selection },
         Search = { bg = M.ui.bg.search, fg = M.ui.fg.contrast },
         StatusLine = { bg = M.ui.bg.panel, fg = M.ui.fg.default },
-        
+
         -- Syntax highlighting
         Comment = { fg = "<%= theme.syntax.comment.default %>", italic = true },
         String = { fg = "<%= theme.syntax.string.default %>" },
@@ -196,7 +196,7 @@ return M
   --active-bg: <%= theme.ui.bg.active %>;
   --hover-bg: <%= theme.ui.bg.hover %>;
   --subtle-fg: <%= theme.ui.fg.subtle %>;
-  
+
   /* Syntax colors */
   --comment: <%= theme.syntax.comment.default %>;
   --string: <%= theme.syntax.string.default %>;
@@ -205,7 +205,7 @@ return M
   --function: <%= theme.syntax.func.default %>;
   --variable: <%= theme.syntax.variable.default %>;
   --type: <%= theme.syntax.type.default %>;
-  
+
   /* Palette colors */
   --red: <%= theme.palette.red %>;
   --green: <%= theme.palette.green %>;
@@ -324,14 +324,14 @@ colors:
   accent: <%= theme.ui.fg.accent %>
   selection: <%= theme.ui.bg.selection %>
   cursor: <%= theme.ui.fg.accent %>
-  
+
   # UI Element Colors
   ui:
     panel: <%= theme.ui.bg.panel %>
     hover: <%= theme.ui.bg.hover %>
     active: <%= theme.ui.bg.active %>
     subtle: <%= theme.ui.fg.subtle %>
-  
+
   # Terminal Colors
   terminal:
     black: <%= theme.palette.black %>
@@ -343,7 +343,7 @@ colors:
     cyan: <%= theme.palette.cyan %>
     white: <%= theme.palette.white %>
 
-# Syntax Highlighting  
+# Syntax Highlighting
 syntax:
   comment: <%= theme.syntax.comment.default %>
   string: <%= theme.syntax.string.default %>
@@ -355,35 +355,43 @@ syntax:
   type: <%= theme.syntax.type.default %>
 ```
 
-## Example folder structure for a complete adapter
+## Example folder structure for an adapter
 
 ```
 my-adapter/
-├── LICENSE               
-├── README.md             
-├── black-atom-adapter.json  
-└── themes/              
-    ├── crbn/            
-    │   ├── black-atom-crbn-null.template.ext
-    │   └── black-atom-crbn-supr.template.ext
-    ├── jpn/             
-    │   ├── black-atom-jpn-koyo-hiru.template.ext
-    │   ├── black-atom-jpn-koyo-yoru.template.ext
-    │   └── black-atom-jpn-tsuki-yoru.template.ext
-    ├── stations/        
-    │   ├── black-atom-stations-engineering.template.ext
-    │   ├── black-atom-stations-medical.template.ext
-    │   ├── black-atom-stations-operations.template.ext
-    │   └── black-atom-stations-research.template.ext
-    └── terra/           
-        ├── black-atom-terra-fall-day.template.ext
-        ├── black-atom-terra-fall-night.template.ext
-        ├── black-atom-terra-spring-day.template.ext
-        ├── black-atom-terra-spring-night.template.ext
-        ├── black-atom-terra-summer-day.template.ext
-        ├── black-atom-terra-summer-night.template.ext
-        ├── black-atom-terra-winter-day.template.ext
-        └── black-atom-terra-winter-night.template.ext
+├── LICENSE
+├── README.md
+├── black-atom-adapter.json
+└── themes/
+    ├── crbn/
+    │   ├── collection.template.ext
+    │   ├── black-atom-crbn-null.ext
+    │   └── black-atom-crbn-supr.ext
+    ├── jpn/
+    │   ├── collection.template.ext
+    │   ├── black-atom-jpn-koyo-hiru.ext
+    │   ├── black-atom-jpn-koyo-yoru.ext
+    │   ├── black-atom-jpn-tsuki-yoru.ext
+    │   └── black-atom-jpn-murasaki-yoru.ext
+    ├── stations/
+    │   ├── collection.template.ext
+    │   ├── black-atom-stations-engineering.ext
+    │   ├── black-atom-stations-medical.ext
+    │   ├── black-atom-stations-operations.ext
+    │   └── black-atom-stations-research.ext
+    └── terra/
+        ├── collection.template.ext
+        ├── black-atom-terra-fall-day.ext
+        ├── black-atom-terra-fall-night.ext
+        ├── black-atom-terra-spring-day.ext
+        ├── black-atom-terra-spring-night.ext
+        ├── black-atom-terra-summer-day.ext
+        ├── black-atom-terra-summer-night.ext
+        ├── black-atom-terra-winter-day.ext
+        └── black-atom-terra-winter-night.ext
 ```
 
 Replace `.ext` with your platform's preferred file extension (`.json`, `.lua`, `.css`, etc.).
+
+Note how each collection has a single `collection.template.ext` file that is used to generate all the theme files for that collection. This reduces duplication and makes maintenance much easier.
+
