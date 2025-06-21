@@ -1,14 +1,78 @@
-# Black Atom Adapter Template
+# Black Atom for [PLATFORM_NAME]
 
-This repository provides a template for creating new Black Atom theme adapters. It includes the basic structure and configuration needed to adapt Black Atom themes to a new platform.
+> Elegant, cohesive themes for [PLATFORM_NAME] by Black Atom Industries
 
-## Getting Started
+## What is a Black Atom Adapter?
 
-1. Clone this repository
-2. Rename it to match your target platform (e.g., `vscode`, `alacritty`)
-3. Update the basic files below to match your platform needs
+This repository is a **[PLATFORM_NAME] adapter** for the Black Atom theme ecosystem. In the Black Atom architecture:
 
-## Repository Structure
+- The [core repository](https://github.com/black-atom-industries/core) is the single source of truth for all theme definitions
+- Each adapter implements these themes for a specific platform ([PLATFORM_NAME], Neovim, terminals, etc.)
+- The adapter uses templates to transform core theme definitions into platform-specific files
+
+This modular approach ensures consistent colors and styling across all supported platforms while allowing for platform-specific optimizations.
+
+## Available Themes
+
+Black Atom includes multiple theme collections, each with its own distinct style:
+
+| Collection | Description | Themes |
+|------------|-------------|---------|
+| **JPN** | Japanese-inspired themes | 4 themes |
+| **MNML** | Minimal themes | 8 themes |
+| **North** | Nordic-inspired themes | 3 themes |
+| **Stations** | Space station-inspired themes | 4 themes |
+| **Terra** | Earth seasons-inspired themes | 8 themes |
+
+## Installation
+
+<!-- REPLACE WITH PLATFORM-SPECIFIC INSTALLATION INSTRUCTIONS -->
+
+### Prerequisites
+
+- [PLATFORM_NAME] application
+- [Black Atom Core](https://github.com/black-atom-industries/core) (for generating themes)
+
+### Setup
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/black-atom-industries/[PLATFORM_NAME].git
+cd [PLATFORM_NAME]
+```
+
+2. Generate theme files using Black Atom Core:
+
+```bash
+black-atom-core generate
+```
+
+3. [PLATFORM_SPECIFIC_INSTALLATION_STEPS]
+
+## Usage
+
+<!-- REPLACE WITH PLATFORM-SPECIFIC USAGE INSTRUCTIONS -->
+
+[PLATFORM_SPECIFIC_USAGE_INSTRUCTIONS]
+
+## Development
+
+This repository uses the Black Atom adapter pattern. Theme files are generated from templates using the core CLI.
+
+### Creating Templates
+
+Templates use the Eta template engine syntax to access theme properties:
+
+```
+<%= theme.ui.bg.default %>   <!-- Access a UI background color -->
+<%= theme.meta.label %>      <!-- Access the theme name -->
+<%= theme.palette.red %>     <!-- Access a palette color -->
+```
+
+**Important**: Never access `theme.primaries` directly in templates. Use `theme.ui`, `theme.syntax`, or `theme.palette` instead.
+
+### Repository Structure
 
 ```
 .
@@ -17,22 +81,24 @@ This repository provides a template for creating new Black Atom theme adapters. 
 ├── EXAMPLES.md               # Example templates in different formats
 ├── black-atom-adapter.json   # Adapter configuration file
 └── themes/                   # Template directory
-    ├── stations/             # Stations collection templates
-    │   └── collection.template.json
     ├── jpn/                  # JPN collection templates
-    │   └── collection.template.json
-    ├── crbn/                 # CRBN collection templates
-    │   └── collection.template.json
+    │   └── collection.template.[ext]
+    ├── mnml/                 # MNML collection templates
+    │   └── collection.template.[ext]
+    ├── north/                # North collection templates
+    │   └── collection.template.[ext]
+    ├── stations/             # Stations collection templates
+    │   └── collection.template.[ext]
     └── terra/                # Terra collection templates
-        └── collection.template.json
+        └── collection.template.[ext]
 ```
 
-## Setup Steps
+### Setup Steps for New Adapters
 
-1. **Update README.md** - Customize this file with platform-specific information
+1. **Update README.md** - Replace placeholders with platform-specific information
 2. **Edit black-atom-adapter.json** - Configure collection-based templates
-3. **Create collection templates** - Create or modify `.template.{ext}` files for each collection
-4. **Test your adapter** - Run `black-atom-core adapt` to generate theme files
+3. **Create collection templates** - Create `.template.{ext}` files for each collection
+4. **Test your adapter** - Run `black-atom-core generate` to generate theme files
 
 ## Template Formats
 
@@ -97,6 +163,7 @@ The `black-atom-adapter.json` file uses a collection-based approach to map templ
 ```
 
 This approach offers several advantages:
+
 - **Reduced duplication**: One template file per collection instead of per theme
 - **Better organization**: Themes are grouped by their collection
 - **Easier maintenance**: When you need to update a template, you only need to modify one file per collection

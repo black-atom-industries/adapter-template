@@ -1,6 +1,5 @@
 {
   "$schema": "https://raw.githubusercontent.com/black-atom-industries/core/refs/heads/main/adapter.schema.json",
-  
   "collections": {
     "stations": {
       "template": "./themes/stations/collection.template.json",
@@ -26,5 +25,6 @@
         "black-atom-terra-spring-day"
       ]
     }
-  }
+  },
+  "enabled": false
 }
