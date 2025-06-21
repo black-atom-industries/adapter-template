@@ -32,7 +32,7 @@ This repository provides a template for creating new Black Atom theme adapters. 
 1. **Update README.md** - Customize this file with platform-specific information
 2. **Edit black-atom-adapter.json** - Configure collection-based templates
 3. **Create collection templates** - Create or modify `.template.{ext}` files for each collection
-4. **Test your adapter** - Run `black-atom-core adapt` to generate theme files
+4. **Test your adapter** - Run `black-atom-core generate` to generate theme files
 
 ## Template Formats
 
@@ -97,6 +97,7 @@ The `black-atom-adapter.json` file uses a collection-based approach to map templ
 ```
 
 This approach offers several advantages:
+
 - **Reduced duplication**: One template file per collection instead of per theme
 - **Better organization**: Themes are grouped by their collection
 - **Easier maintenance**: When you need to update a template, you only need to modify one file per collection
