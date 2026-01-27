@@ -14,15 +14,15 @@ This modular approach ensures consistent colors and styling across all supported
 
 ## Available Themes
 
-Black Atom includes multiple theme collections, each with its own distinct style:
+Black Atom includes multiple theme collections, each with dark and light variants:
 
-| Collection | Description | Themes |
-|------------|-------------|---------|
-| **JPN** | Japanese-inspired themes | 4 themes |
-| **MNML** | Minimal themes | 8 themes |
-| **North** | Nordic-inspired themes | 3 themes |
-| **Stations** | Space station-inspired themes | 4 themes |
-| **Terra** | Earth seasons-inspired themes | 8 themes |
+| Collection    | Description                   |
+| ------------- | ----------------------------- |
+| **Default**   | Core Black Atom themes        |
+| **JPN**       | Japanese-inspired themes      |
+| **MNML**      | Minimalist accent themes      |
+| **Stations**  | Space station-inspired themes |
+| **Terra**     | Earth season-inspired themes  |
 
 ## Installation
 
@@ -60,6 +60,22 @@ black-atom-core generate
 
 This repository uses the Black Atom adapter pattern. Theme files are generated from templates using the core CLI.
 
+### Installing Black Atom Core CLI
+
+To generate themes, you need the Black Atom Core CLI installed:
+
+```bash
+# Clone and enter the core repository
+git clone https://github.com/black-atom-industries/core.git
+cd core
+
+# Compile and install the CLI
+deno task cli:compile
+deno task cli:install
+```
+
+This installs the `black-atom-core` binary to `/usr/local/bin`.
+
 ### Creating Templates
 
 Templates use the Eta template engine syntax to access theme properties:
@@ -81,11 +97,11 @@ Templates use the Eta template engine syntax to access theme properties:
 ├── EXAMPLES.md               # Example templates in different formats
 ├── black-atom-adapter.json   # Adapter configuration file
 └── themes/                   # Template directory
+    ├── default/              # Default collection templates
+    │   └── collection.template.[ext]
     ├── jpn/                  # JPN collection templates
     │   └── collection.template.[ext]
     ├── mnml/                 # MNML collection templates
-    │   └── collection.template.[ext]
-    ├── north/                # North collection templates
     │   └── collection.template.[ext]
     ├── stations/             # Stations collection templates
     │   └── collection.template.[ext]
