@@ -31,7 +31,7 @@ Black Atom includes multiple theme collections, each with dark and light variant
 ### Prerequisites
 
 - [PLATFORM_NAME] application
-- [Black Atom Core](https://github.com/black-atom-industries/core) (for generating themes)
+- [Deno](https://deno.land/) runtime (for generating themes)
 
 ### Setup
 
@@ -42,10 +42,10 @@ git clone https://github.com/black-atom-industries/[PLATFORM_NAME].git
 cd [PLATFORM_NAME]
 ```
 
-2. Generate theme files using Black Atom Core:
+2. Generate theme files:
 
 ```bash
-black-atom-core generate
+deno task generate
 ```
 
 3. [PLATFORM_SPECIFIC_INSTALLATION_STEPS]
@@ -58,23 +58,18 @@ black-atom-core generate
 
 ## Development
 
-This repository uses the Black Atom adapter pattern. Theme files are generated from templates using the core CLI.
-
-### Installing Black Atom Core CLI
-
-To generate themes, you need the Black Atom Core CLI installed:
+This repository uses the Black Atom adapter pattern. Theme files are generated from templates using [Black Atom Core](https://jsr.io/@black-atom/core). You need [Deno](https://deno.land/) installed.
 
 ```bash
-# Clone and enter the core repository
-git clone https://github.com/black-atom-industries/core.git
-cd core
+# Generate all theme files
+deno task generate
 
-# Compile and install the CLI
-deno task cli:compile
-deno task cli:install
+# Or use watch mode for live regeneration
+deno task dev
+
+# Pull latest core version
+deno task update
 ```
-
-This installs the `black-atom-core` binary to `/usr/local/bin`.
 
 ### Creating Templates
 
@@ -114,7 +109,7 @@ Templates use the Eta template engine syntax to access theme properties:
 1. **Update README.md** - Replace placeholders with platform-specific information
 2. **Edit black-atom-adapter.json** - Configure collection-based templates
 3. **Create collection templates** - Create `.template.{ext}` files for each collection
-4. **Test your adapter** - Run `black-atom-core generate` to generate theme files
+4. **Test your adapter** - Run `deno task generate` to generate theme files
 
 ## Template Formats
 
@@ -189,7 +184,7 @@ If your platform requires multiple output files per theme, you can handle this i
 ## For More Information
 
 - See [EXAMPLES.md](./EXAMPLES.md) for template examples in different formats
-- See the [Adapter Development Guide](https://github.com/black-atom-industries/core/blob/main/ADAPTER_DEVELOPMENT.md) in the core repository for detailed documentation
+- See the [Adapter Architecture](https://github.com/black-atom-industries/core/blob/main/docs/adapter-generation-architecture.md) in the core repository for detailed documentation
 
 ## License
 
