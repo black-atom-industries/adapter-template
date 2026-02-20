@@ -1,0 +1,41 @@
+{
+  "name": "Black Atom — TER ∷ Spring Day",
+  "type": "light",
+  "description": "A Black Atom theme from the TERRA collection",
+
+  "colors": {
+    "background": "#d4dcd8",
+    "foreground": "#385547",
+    "accent": "#e49f1a",
+    "selection": "#e2eae6",
+    "hover": "#b9c6bf",
+    "active": "#b9c6bf",
+    "panel": "#c7d1cc",
+    "border": "#b9c6bf",
+
+    "info": "#588dc1",
+    "warning": "#e49f1a",
+    "error": "#dd7e5d",
+    "success": "#11b066",
+
+    "black": "#517b67",
+    "red": "#dd7e5d",
+    "green": "#11b066",
+    "yellow": "#e49f1a",
+    "blue": "#588dc1",
+    "magenta": "#a586c6",
+    "cyan": "#0fab6a",
+    "white": "#d4dcd8"
+  },
+
+  "syntax": {
+    "comment": "#55816a",
+    "string": "#11b066",
+    "number": "#0e9b55",
+    "keyword": "#a586c6",
+    "function": "#e49f1a",
+    "variable": "#588dc1",
+    "type": "#0fab6a",
+    "tag": "#e49f1a"
+  }
+}

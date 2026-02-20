@@ -1,0 +1,41 @@
+{
+  "name": "Black Atom — Dark",
+  "type": "dark",
+  "description": "A Black Atom theme from the Default collection",
+
+  "colors": {
+    "background": "#111817",
+    "foreground": "#c9dae7",
+    "accent": "#afdca9",
+    "selection": "#232a2a",
+    "hover": "#1a2121",
+    "active": "#1a2121",
+    "panel": "#080f0f",
+    "border": "#1a2121",
+
+    "info": "#00b9c3",
+    "warning": "#dd881b",
+    "error": "#e97292",
+    "success": "#4cb86a",
+
+    "black": "#232a2a",
+    "red": "#91a1ad",
+    "green": "#73838e",
+    "yellow": "#73838e",
+    "blue": "#5c6b76",
+    "magenta": "#8fbc8a",
+    "cyan": "#afdca9",
+    "white": "#c9dae7"
+  },
+
+  "syntax": {
+    "comment": "#73838e",
+    "string": "#8fbc8a",
+    "number": "#a3b4c0",
+    "keyword": "#ccc5ff",
+    "function": "#afdca9",
+    "variable": "#a3b4c0",
+    "type": "#afdca9",
+    "tag": "#afdca9"
+  }
+}

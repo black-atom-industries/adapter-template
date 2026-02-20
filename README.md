@@ -90,18 +90,24 @@ Templates use the Eta template engine syntax to access theme properties:
 ├── LICENSE                   # MIT license
 ├── README.md                 # This documentation
 ├── EXAMPLES.md               # Example templates in different formats
+├── deno.json                 # Deno tasks (generate, dev, update)
 ├── black-atom-adapter.json   # Adapter configuration file
-└── themes/                   # Template directory
-    ├── default/              # Default collection templates
-    │   └── collection.template.[ext]
-    ├── jpn/                  # JPN collection templates
-    │   └── collection.template.[ext]
-    ├── mnml/                 # MNML collection templates
-    │   └── collection.template.[ext]
-    ├── stations/             # Stations collection templates
-    │   └── collection.template.[ext]
-    └── terra/                # Terra collection templates
-        └── collection.template.[ext]
+└── themes/                   # Template and generated files
+    ├── default/              # Default collection
+    │   ├── collection.template.[ext]
+    │   └── black-atom-default-dark.[ext]      # ← generated
+    ├── jpn/                  # JPN collection
+    │   ├── collection.template.[ext]
+    │   └── black-atom-jpn-koyo-yoru.[ext]     # ← generated
+    ├── mnml/                 # MNML collection
+    │   ├── collection.template.[ext]
+    │   └── black-atom-mnml-clay-dark.[ext]    # ← generated
+    ├── stations/             # Stations collection
+    │   ├── collection.template.[ext]
+    │   └── black-atom-stations-engineering.[ext]  # ← generated
+    └── terra/                # Terra collection
+        ├── collection.template.[ext]
+        └── black-atom-terra-spring-day.[ext]  # ← generated
 ```
 
 ### Setup Steps for New Adapters

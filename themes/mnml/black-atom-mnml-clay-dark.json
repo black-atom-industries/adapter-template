@@ -1,0 +1,41 @@
+{
+  "name": "Black Atom — MNM ∷ Clay Dark",
+  "type": "dark",
+  "description": "A Black Atom theme from the MNM collection",
+
+  "colors": {
+    "background": "#302e28",
+    "foreground": "#e3decc",
+    "accent": "#fc8a61",
+    "selection": "#4a4842",
+    "hover": "#3c3a35",
+    "active": "#3c3a35",
+    "panel": "#23211c",
+    "border": "#3c3a35",
+
+    "info": "#6ab8e4",
+    "warning": "#d3a563",
+    "error": "#fc8a61",
+    "success": "#99bb77",
+
+    "black": "#4a4842",
+    "red": "#b4ae9c",
+    "green": "#a49e8d",
+    "yellow": "#a49e8d",
+    "blue": "#b4ae9c",
+    "magenta": "#a49e8d",
+    "cyan": "#b4ae9c",
+    "white": "#b4ae9c"
+  },
+
+  "syntax": {
+    "comment": "#a49e8d",
+    "string": "#d3cebc",
+    "number": "#c2beac",
+    "keyword": "#e3decc",
+    "function": "#fc8a61",
+    "variable": "#d3cebc",
+    "type": "#f3efdc",
+    "tag": "#fc8a61"
+  }
+}

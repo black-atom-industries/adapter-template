@@ -1,16 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/black-atom-industries/core/refs/heads/main/adapter.schema.json",
   "collections": {
+    "default": {
+      "template": "./themes/default/collection.template.json",
+      "themes": [
+        "black-atom-default-dark"
+      ]
+    },
     "stations": {
       "template": "./themes/stations/collection.template.json",
       "themes": [
         "black-atom-stations-engineering"
-      ]
-    },
-    "crbn": {
-      "template": "./themes/crbn/collection.template.json",
-      "themes": [
-        "black-atom-crbn-null"
       ]
     },
     "jpn": {
@@ -23,6 +23,12 @@
       "template": "./themes/terra/collection.template.json",
       "themes": [
         "black-atom-terra-spring-day"
+      ]
+    },
+    "mnml": {
+      "template": "./themes/mnml/collection.template.json",
+      "themes": [
+        "black-atom-mnml-clay-dark"
       ]
     }
   },

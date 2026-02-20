@@ -361,18 +361,25 @@ syntax:
 my-adapter/
 ├── LICENSE
 ├── README.md
+├── deno.json
 ├── black-atom-adapter.json
 └── themes/
-    ├── crbn/
+    ├── default/
     │   ├── collection.template.ext
-    │   ├── black-atom-crbn-null.ext
-    │   └── black-atom-crbn-supr.ext
+    │   ├── black-atom-default-dark.ext
+    │   ├── black-atom-default-dark-dimmed.ext
+    │   ├── black-atom-default-light.ext
+    │   └── black-atom-default-light-dimmed.ext
     ├── jpn/
     │   ├── collection.template.ext
     │   ├── black-atom-jpn-koyo-hiru.ext
     │   ├── black-atom-jpn-koyo-yoru.ext
     │   ├── black-atom-jpn-tsuki-yoru.ext
     │   └── black-atom-jpn-murasaki-yoru.ext
+    ├── mnml/
+    │   ├── collection.template.ext
+    │   ├── black-atom-mnml-clay-dark.ext
+    │   └── ...
     ├── stations/
     │   ├── collection.template.ext
     │   ├── black-atom-stations-engineering.ext

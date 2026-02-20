@@ -1,0 +1,41 @@
+{
+  "name": "Black Atom — STA ∷ Engineering",
+  "type": "dark",
+  "description": "A Black Atom theme from the Stations collection",
+
+  "colors": {
+    "background": "#0d1818",
+    "foreground": "#d5f4e3",
+    "accent": "#c6de68",
+    "selection": "#2a3535",
+    "hover": "#1c2626",
+    "active": "#1c2626",
+    "panel": "#030b0b",
+    "border": "#1c2626",
+
+    "info": "#c3eed9",
+    "warning": "#c6de68",
+    "error": "#f08cb4",
+    "success": "#7fcd81",
+
+    "black": "#2a3535",
+    "red": "#f08cb4",
+    "green": "#7fcd81",
+    "yellow": "#c6de68",
+    "blue": "#c3eed9",
+    "magenta": "#a5a9e5",
+    "cyan": "#81d6a5",
+    "white": "#d5f4e3"
+  },
+
+  "syntax": {
+    "comment": "#51796d",
+    "string": "#7fcd81",
+    "number": "#64c06a",
+    "keyword": "#a5a9e5",
+    "function": "#c6de68",
+    "variable": "#c3eed9",
+    "type": "#81d6a5",
+    "tag": "#c6de68"
+  }
+}

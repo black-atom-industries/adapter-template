@@ -1,0 +1,41 @@
+{
+  "name": "Black Atom — JPN ∷ Koyo Yoru",
+  "type": "dark",
+  "description": "A Black Atom theme from the JPN collection",
+
+  "colors": {
+    "background": "#35293a",
+    "foreground": "#fbcaa4",
+    "accent": "#edaa4b",
+    "selection": "#4d4053",
+    "hover": "#413446",
+    "active": "#413446",
+    "panel": "#291d2e",
+    "border": "#413446",
+
+    "info": "#a298b9",
+    "warning": "#edaa4b",
+    "error": "#e47889",
+    "success": "#5db28d",
+
+    "black": "#4d4053",
+    "red": "#e47889",
+    "green": "#5db28d",
+    "yellow": "#edaa4b",
+    "blue": "#a298b9",
+    "magenta": "#eda77d",
+    "cyan": "#7ea99c",
+    "white": "#fbcaa4"
+  },
+
+  "syntax": {
+    "comment": "#605872",
+    "string": "#5db28d",
+    "number": "#4fa480",
+    "keyword": "#eda77d",
+    "function": "#edaa4b",
+    "variable": "#ecbd96",
+    "type": "#7ea99c",
+    "tag": "#edaa4b"
+  }
+}
